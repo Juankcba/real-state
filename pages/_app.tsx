@@ -1,6 +1,17 @@
-import '@/styles/globals.css'
-import type { AppProps } from 'next/app'
+import "@/styles/globals.scss";
+import type { AppProps } from "next/app";
+import { NextUIProvider, CssBaseline } from "@nextui-org/react";
+import { darkTheme, materialTheme } from "../themes";
+import { ThemeProvider } from "@mui/material";
 
 export default function App({ Component, pageProps }: AppProps) {
-  return <Component {...pageProps} />
+  return (
+    // 2. Use at the root of your app
+    <NextUIProvider theme={darkTheme}>
+      <ThemeProvider theme={materialTheme}>
+        <CssBaseline />
+        <Component {...pageProps} />
+      </ThemeProvider>
+    </NextUIProvider>
+  );
 }
