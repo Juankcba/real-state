@@ -30,17 +30,23 @@ const BannerHome = () => {
       <Row
         css={{
           position: "absolute",
-          top: "299px",
-          left: "135px",
+          top: "50%",
+          left: "50px",
+          "@mdMin": {
+            top: "299px",
+            left: "135px",
+          },
           zIndex: 2,
           display: "flex",
           flexDirection: "column",
         }}
       >
-        <Text h1>
+        <Text h1 size={"$5xl"}>
           Find Your <span className="banner-home-span">Dream Home</span>
         </Text>
-        <Text h1> in Puerto Rico </Text>
+        <Text h1 size={"$5xl"}>
+          in Puerto Rico
+        </Text>
       </Row>
     </Container>
   );

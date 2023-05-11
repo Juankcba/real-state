@@ -174,15 +174,12 @@ const ListHouse = () => {
     <Grid.Container css={{ m: "64px auto", maxWidth: "1170px" }}>
       <Grid
         xs={12}
+        sm={8}
         css={{
-          mb: "32px",
-          d: "flex",
-          flexDirection: "row",
           w: "100%",
-          justifyContent: "space-between",
         }}
       >
-        <Row css={{ gap: "24px" }}>
+        <Row css={{ gap: "0.75rem", display: "flex", flexWrap: "wrap" }}>
           <Button auto flat bordered className="btn-outline-primary">
             All
           </Button>
@@ -196,8 +193,16 @@ const ListHouse = () => {
             2 Bed Room
           </Button>
         </Row>
-
-        <Button className="btn-filled-primary">
+      </Grid>
+      <Grid
+        xs={12}
+        sm={4}
+        css={{ m: "24px auto", "@smMin": { m: "0 ", w: "100%" } }}
+      >
+        <Button
+          className="btn-filled-primary"
+          css={{ m: "0 auto", "@smMin": { ml: "auto" } }}
+        >
           Filters
           <FilterIcons
             size={20}
@@ -208,6 +213,7 @@ const ListHouse = () => {
           />
         </Button>
       </Grid>
+      <Grid xs={12} css={{ mt: "24px" }}></Grid>
       {houses.map((house) => (
         <Grid xs={12} sm={6} key={house.id} css={{ p: "8px" }}>
           <HomeCard house={house} />
