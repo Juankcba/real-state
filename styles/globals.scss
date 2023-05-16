@@ -111,3 +111,61 @@ a {
 .banner-home-span {
   color: #ff9505;
 }
+
+.custom-map-container {
+  background: #f1f1f1;
+  .nextui-navbar-container {
+    padding: 0 !important;
+
+    background: #f1f1f1;
+  }
+  .button-active {
+    background: #fffbfb;
+    border-radius: 8px;
+    font-family: "Montserrat";
+    font-style: normal;
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 139.52%;
+    color: #1b1b1b;
+    border-right: 1px solid #e6e2e2;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+    img {
+      width: auto;
+      height: 24px;
+      object-fit: contain;
+      object-position: center;
+    }
+    p {
+      padding-left: 8px;
+      color: #1b1b1b;
+    }
+  }
+  .button-deactive {
+    background: #f1f1f1;
+    font-family: "Montserrat";
+    font-style: normal;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 139.52%;
+    color: rgba(27, 27, 27, 0.55);
+    border-right: 1px solid #e6e2e2;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+    img {
+      width: auto;
+      height: 24px;
+      object-fit: contain;
+      object-position: center;
+    }
+    p {
+      padding-left: 8px;
+      color: rgba(27, 27, 27, 0.55);
+    }
+  }
+}

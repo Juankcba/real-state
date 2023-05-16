@@ -1,5 +1,6 @@
 import BannerHome from "@/components/home/BannerHome";
 import ListHouse from "@/components/home/ListHouse";
+import NeighborhoodPage from "@/components/home/Neighborhood";
 import { Button, Container, Grid, Row, Text } from "@nextui-org/react";
 import Head from "next/head";
 import Image from "next/image";
@@ -20,6 +21,7 @@ export default function Home() {
         >
           <BannerHome />
           <ListHouse />
+          <NeighborhoodPage />
         </Container>
       </Layout>
     </>

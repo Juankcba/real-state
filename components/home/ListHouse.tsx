@@ -1,11 +1,12 @@
 import React, { useState } from "react";
-import { Grid } from "@nextui-org/react";
+import { Grid, Image, Text } from "@nextui-org/react";
 import { Row } from "@nextui-org/react";
 import { Button } from "@nextui-org/react";
 import { FilterIcons } from "../ui/icons/FilterIcons";
 import HomeCard from "../ui/cards/HomeCard";
 
 const ListHouse = () => {
+  const [indexOfProducts, setIndex] = useState(0);
   const [houses, setHouses] = useState([
     {
       id: 0,
@@ -170,6 +171,11 @@ const ListHouse = () => {
       ],
     },
   ]);
+
+  const handleMore = () => {
+    let indexData = indexOfProducts + 1;
+    setIndex(indexData);
+  };
   return (
     <Grid.Container css={{ m: "64px auto", maxWidth: "1170px" }}>
       <Grid
@@ -214,11 +220,36 @@ const ListHouse = () => {
         </Button>
       </Grid>
       <Grid xs={12} css={{ mt: "24px" }}></Grid>
-      {houses.map((house) => (
+      {houses.slice(0, 4 * (indexOfProducts + 1)).map((house) => (
         <Grid xs={12} sm={6} key={house.id} css={{ p: "8px" }}>
           <HomeCard house={house} />
         </Grid>
       ))}
+      {(indexOfProducts + 1) * 4 < houses.length && (
+        <Grid xs={12}>
+          <Row
+            css={{
+              margin: "32px auto",
+              width: "75px",
+              height: "72px",
+              display: "flex",
+              justifyContent: "center",
+              flexDirection: "column",
+              alignItems: "centers",
+              cursor: "pointer",
+            }}
+            onClick={handleMore}
+          >
+            <Image
+              src={"/assets/icons/arrow-drown.svg"}
+              alt="arrow-down"
+              objectFit="contain"
+            />
+
+            <Text>View More</Text>
+          </Row>
+        </Grid>
+      )}
     </Grid.Container>
   );
 };
