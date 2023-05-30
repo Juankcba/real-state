@@ -16,11 +16,12 @@ const BannerHome = () => {
       <Image
         src="/assets/img/banner.png"
         alt="Banner-Home"
-        width={"100%"}
+        width={"100vw"}
         height={776}
         css={{
           position: "absolute",
           top: 0,
+          width: "100%",
           left: 0,
           zIndex: 1,
           objectFit: "cover",

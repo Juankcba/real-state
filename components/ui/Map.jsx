@@ -28,91 +28,101 @@ function Map({ markers, zoom }) {
 
     const [schoolMarked, setSchoolMarked] = useState([
         {
-            name:'Colegio San Ignacio de Loyola',
+            name: 'Colegio San Ignacio de Loyola',
             id: uuidv4(),
-            
-      latitude: 18.377482,
-      longitude: -66.087139,
-      show: false,
-      info: "<p>https://www.sanignacio.pr/admisiones</p>",
+
+            latitude: 18.377482,
+            longitude: -66.087139,
+            show: false,
+            icon: 'school',
+            info: "<p>https://www.sanignacio.pr/admisiones</p>",
 
         },
         {
-            name:'Colegio Marista de Guaynabo',
+            name: 'Colegio Marista de Guaynabo',
             id: uuidv4(),
-            
-      latitude: 18.3809866,
-      longitude: -66.1236988,
-      show: false,
-      info: "",
+
+            latitude: 18.3809866,
+            longitude: -66.1236988,
+            show: false,
+            icon: 'school',
+            info: "",
         },
         {
-            name:'Colegio Puertorriqueño de Niñas',
+            name: 'Colegio Puertorriqueño de Niñas',
             id: uuidv4(),
-      latitude: 18.4065451,
-      longitude: -66.0988513,
-      show: false,
-      info: "",
-            
+            latitude: 18.4065451,
+            longitude: -66.0988513,
+            icon: 'school',
+            show: false,
+            info: "",
+
         },
         {
-            name :'Colegio San Antonio Abad',
+            name: 'Colegio San Antonio Abad',
             id: uuidv4(),
-      latitude: 18.1436311,
-      longitude: -65.8514381,
-      show: false,
-      info: "",
+            latitude: 18.1436311,
+            longitude: -65.8514381,
+            show: false,
+            icon: 'school',
+            info: "",
         },
         {
-            name:'Colegio Rosa-Bell',
+            name: 'Colegio Rosa-Bell',
             id: uuidv4(),
-      latitude: 18.3881778,
-      longitude: -66.1214808,
-      show: false,
-      info: "",
+            latitude: 18.3881778,
+            longitude: -66.1214808,
+            show: false,
+            icon: 'school',
+            info: "",
         },
         {
-            name:'Colegio Adianez',
+            name: 'Colegio Adianez',
             id: uuidv4(),
-      latitude: 18.3615964,
-      longitude: -66.1085951,
-      show: false,
-      info: "",
+            latitude: 18.3615964,
+            longitude: -66.1085951,
+            show: false,
+            icon: 'school',
+            info: "",
         },
         {
-            name:'Colegio San Vicente Ferrer',
+            name: 'Colegio San Vicente Ferrer',
             id: uuidv4(),
-      latitude: 18.441949,
-      longitude: -66.0684449,
-      show: false,
-      info: "",
-            
+            latitude: 18.441949,
+            longitude: -66.0684449,
+            show: false,
+            icon: 'school',
+            info: "",
+
         },
-        
+
         {
-            name:'Colegio La Piedad',
+            name: 'Colegio La Piedad',
             id: uuidv4(),
-      latitude: 18.4419479,
-      longitude: -66.0864696,
-      show: false,
-      info: "",
-        },
-        {
-            name:'Colegio San José',
-            id: uuidv4(),
-      latitude: 18.3957865,
-      longitude: -66.0485682,
-      show: false,
-      info: "",
+            latitude: 18.4419479,
+            longitude: -66.0864696,
+            show: false,
+            icon: 'school',
+            info: "",
         },
         {
-            name:'Colegio San Ignacio de Loyola - Mayagüez',
+            name: 'Colegio San José',
             id: uuidv4(),
-      latitude: 18.3774025,
-      longitude: -66.0888084,
-      show: false,
-      info: "",
-        }   
+            latitude: 18.3957865,
+            longitude: -66.0485682,
+            show: false,
+            icon: 'school',
+            info: "",
+        },
+        {
+            name: 'Colegio San Ignacio de Loyola - Mayagüez',
+            id: uuidv4(),
+            latitude: 18.3774025,
+            longitude: -66.0888084,
+            show: false,
+            icon: 'school',
+            info: "",
+        }
     ]);
 
     const [marcadores, setMarcadores] = useState([]);
@@ -186,7 +196,9 @@ function Map({ markers, zoom }) {
                             e.originalEvent.stopPropagation();
                             setShowPopup(m.id, true);
                         }}
-                    ></Marker>
+                    >
+                        {m.icon == 'school' && (<Image src={'/assets/icons/school.svg'} alt={'icon-school'} />)}
+                    </Marker>
                     {m.show && (
                         <Popup
                             longitude={m.longitude}
@@ -207,12 +219,12 @@ function Map({ markers, zoom }) {
                 <Navbar.Content css={{ w: '100%', p: 0, display: 'flex', flexDirection: 'row', gap: '0px', justifyContent: 'space-between' }}>
                     <Button className={filtersMarked.find(f => f == 'school') ? "button-active" : "button-deactive"} css={{ h: '100%', borderRadius: '0px' }} onPress={() => addFilterMarker('school')}><SchoolIcon /><Text>School</Text></Button>
                     <Button className={filtersMarked.find(f => f == 'hospital') ? "button-active" : "button-deactive"} css={{ h: '100%', borderRadius: '0px' }} onPress={() => addFilterMarker('hospital')}><LocalHospitalIcon /><Text>Hospital</Text></Button>
-                    <Button className={filtersMarked.find(f => f == 'restaraunt') ? "button-active" : "button-deactive"} css={{ h: '100%', borderRadius: '0px' }} onPress={() => addFilterMarker('restaraunt')}><RestaurantIcon/><Text>Restaurants</Text></Button>
-                    <Button className={filtersMarked.find(f => f == 'groceries') ? "button-active" : "button-deactive"} css={{ h: '100%', borderRadius: '0px' }} onPress={() => addFilterMarker('groceries')}><LocalGroceryStoreIcon/><Text>Groceries</Text></Button>
-                    <Button className={filtersMarked.find(f => f == 'bank') ? "button-active" : "button-deactive"} css={{ h: '100%', borderRadius: '0px' }} onPress={() => addFilterMarker('bank')}><AccountBalanceIcon/><Text>Bank</Text></Button>
+                    <Button className={filtersMarked.find(f => f == 'restaraunt') ? "button-active" : "button-deactive"} css={{ h: '100%', borderRadius: '0px' }} onPress={() => addFilterMarker('restaraunt')}><RestaurantIcon /><Text>Restaurants</Text></Button>
+                    <Button className={filtersMarked.find(f => f == 'groceries') ? "button-active" : "button-deactive"} css={{ h: '100%', borderRadius: '0px' }} onPress={() => addFilterMarker('groceries')}><LocalGroceryStoreIcon /><Text>Groceries</Text></Button>
+                    <Button className={filtersMarked.find(f => f == 'bank') ? "button-active" : "button-deactive"} css={{ h: '100%', borderRadius: '0px' }} onPress={() => addFilterMarker('bank')}><AccountBalanceIcon /><Text>Bank</Text></Button>
                     <Button className={filtersMarked.find(f => f == 'gym') ? "button-active" : "button-deactive"} css={{ h: '100%', borderRadius: '0px' }} onPress={() => addFilterMarker('gym')}><FitnessCenterIcon /><Text>Gym</Text></Button>
-                    <Button className={filtersMarked.find(f => f == 'police') ? "button-active" : "button-deactive"} css={{ h: '100%', borderRadius: '0px' }} onPress={() => addFilterMarker('police')}><LocalPoliceIcon/><Text>Police Station</Text></Button>
-                    <Button className={filtersMarked.find(f => f == 'bus') ? "button-active" : "button-deactive"} css={{ h: '100%', borderRadius: '0px' }} onPress={() => addFilterMarker('bus')}><DirectionsBusIcon/><Text>Bus Stop</Text></Button>
+                    <Button className={filtersMarked.find(f => f == 'police') ? "button-active" : "button-deactive"} css={{ h: '100%', borderRadius: '0px' }} onPress={() => addFilterMarker('police')}><LocalPoliceIcon /><Text>Police Station</Text></Button>
+                    <Button className={filtersMarked.find(f => f == 'bus') ? "button-active" : "button-deactive"} css={{ h: '100%', borderRadius: '0px' }} onPress={() => addFilterMarker('bus')}><DirectionsBusIcon /><Text>Bus Stop</Text></Button>
                 </Navbar.Content>
 
             </Navbar>

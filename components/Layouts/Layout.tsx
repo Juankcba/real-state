@@ -1,9 +1,18 @@
 import { FC, PropsWithChildren } from "react";
 import Head from "next/head";
 
-import { Container, Link, Text, useTheme } from "@nextui-org/react";
-import Image from "next/image";
+import {
+  Container,
+  Link,
+  Navbar,
+  Text,
+  Button,
+  useTheme,
+  Image,
+} from "@nextui-org/react";
+
 import NextLink from "next/link";
+import { Box } from "../ui/Box";
 
 interface Props {
   title?: string;
@@ -19,12 +28,16 @@ export const Layout: FC<PropsWithChildren<Props>> = ({
 }) => {
   const { theme } = useTheme();
   return (
-    <>
+    <Box
+      css={{
+        maxW: "100%",
+      }}
+    >
       <Head>
-        <title>{title || "RealState App"}</title>
+        <title>{title || "GMAC INVESTMENT PUERTO RICO LLC"}</title>
         <meta name="author" content="Blade Link Company" />
         <meta name="description" content={pageDescription || `| ${title}`} />
-        <meta name="keywords" content={`${title}, real state, pokedex`} />
+        <meta name="keywords" content={`${title}, real state, Puerto Rico`} />
 
         <meta property="og:title" content={`${title}`} />
         <meta
@@ -33,6 +46,19 @@ export const Layout: FC<PropsWithChildren<Props>> = ({
         />
         <meta property="og:image" content={`${origin}/assets/img/banner.png`} />
       </Head>
+      <Navbar variant="sticky">
+        <Navbar.Brand>
+          <Image src="/logo.svg" alt="Logo" />
+        </Navbar.Brand>
+        <Navbar.Content hideIn="xs">
+          <Navbar.Link href="#home">Home</Navbar.Link>
+          <Navbar.Link href="#about-us">About Us</Navbar.Link>
+          <Navbar.Link href="#other-proyects">Other Proyects</Navbar.Link>
+          <Button as={Link} href="#enquire-now" auto color="warning">
+            Enquire Now
+          </Button>
+        </Navbar.Content>
+      </Navbar>
 
       <main
         style={{
@@ -62,13 +88,12 @@ export const Layout: FC<PropsWithChildren<Props>> = ({
                 alt="bl-logo"
                 width={150}
                 height={100}
-                objectPosition={"center"}
                 objectFit={"contain"}
               />
             </Link>
           </NextLink>
         </div>
       </footer>
-    </>
+    </Box>
   );
 };
