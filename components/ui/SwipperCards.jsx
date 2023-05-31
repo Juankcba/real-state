@@ -29,24 +29,7 @@ export const SwipperCards = () => {
                 }}
                 navigation={true}
                 modules={[Autoplay, Pagination, Navigation]}
-                breakpoints={{
-                    "640": {
-                        slidesPerView: 2.5,
 
-                    },
-                    "768": {
-                        slidesPerView: 2.75,
-
-                    },
-                    "1080": {
-                        slidesPerView: 3.25,
-
-                    },
-                    "1280": {
-                        slidesPerView: 3.75,
-
-                    },
-                }}
                 class="swiper-wrapper"
             >
                 <SwiperSlide class="swiper-slide">
