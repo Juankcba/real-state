@@ -13,6 +13,7 @@ import {
 
 import NextLink from "next/link";
 import { Box } from "../ui/Box";
+import { useRouter } from "next/router";
 
 interface Props {
   title?: string;
@@ -27,6 +28,7 @@ export const Layout: FC<PropsWithChildren<Props>> = ({
   pageDescription,
 }) => {
   const { theme } = useTheme();
+  const router = useRouter();
   return (
     <Box
       css={{
@@ -44,11 +46,16 @@ export const Layout: FC<PropsWithChildren<Props>> = ({
           property="og:description"
           content={pageDescription || `Encuentra tu casa soñada |  ${title}`}
         />
-        <meta property="og:image" content={`${origin}/assets/img/banner.png`} />
+        <meta property="og:image" content={`${origin}/logo.svg`} />
       </Head>
       <Navbar variant="sticky">
         <Navbar.Brand>
-          <Image src="/logo.svg" alt="Logo" />
+          <Image
+            src="/logo-horizontal.svg"
+            alt="Logo"
+            onClick={() => router.push("/")}
+            css={{ cursor: "pointer", height: "60px", objectFit: "contain" }}
+          />
         </Navbar.Brand>
         <Navbar.Content hideIn="xs">
           <Navbar.Link href="#home">Home</Navbar.Link>
@@ -60,20 +67,12 @@ export const Layout: FC<PropsWithChildren<Props>> = ({
         </Navbar.Content>
       </Navbar>
 
-      <main
-        style={{
-          padding: "0px",
-          minHeight: "84vh",
-          width: "100%",
-        }}
-      >
-        {children}
-      </main>
+      <main>{children}</main>
 
       <footer
         style={{
-          marginTop: "30px",
-          height: "100px",
+          margin: "32px 0px",
+          height: "311px",
           display: "flex",
           width: "100%",
           backgroundColor: theme?.colors.gray200.value,

@@ -1,3 +1,4 @@
+import AboutUs from "@/components/home/AboutUs";
 import BannerHome from "@/components/home/BannerHome";
 import ListHouse from "@/components/home/ListHouse";
 import NeighborhoodPage from "@/components/home/Neighborhood";
@@ -6,6 +7,8 @@ import Head from "next/head";
 import Image from "next/image";
 import { Layout } from "../components/Layouts/Layout";
 import { FilterIcons } from "../components/ui/icons/FilterIcons";
+import OtherProyect from "../components/home/OtherProyect";
+import ContactUs from "@/components/home/ContactUs";
 
 export default function Home() {
   return (
@@ -21,6 +24,9 @@ export default function Home() {
         <BannerHome />
         <ListHouse />
         <NeighborhoodPage />
+        <AboutUs />
+        <OtherProyect />
+        <ContactUs />
       </Container>
     </Layout>
   );

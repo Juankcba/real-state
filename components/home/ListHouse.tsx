@@ -183,6 +183,7 @@ const ListHouse = () => {
         sm={8}
         css={{
           w: "100%",
+          p: "0px 8px",
         }}
       >
         <Row css={{ gap: "0.75rem", display: "flex", flexWrap: "wrap" }}>
@@ -203,11 +204,11 @@ const ListHouse = () => {
       <Grid
         xs={12}
         sm={4}
-        css={{ m: "24px auto", "@smMin": { m: "0 ", w: "100%" } }}
+        css={{ p: "0px 8px", m: "24px auto", "@smMin": { m: "0", w: "100%" } }}
       >
         <Button
           className="btn-filled-primary"
-          css={{ m: "0 auto", "@smMin": { ml: "auto" } }}
+          css={{ ml: "auto", "@smMin": { ml: "auto" } }}
         >
           Filters
           <FilterIcons
