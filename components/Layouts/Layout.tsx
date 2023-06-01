@@ -81,8 +81,8 @@ export const Layout: FC<PropsWithChildren<Props>> = ({
           backgroundColor: theme?.colors.gray200.value,
         }}
       >
-        <Grid.Container gap={1} css={{ p: "64px" }}>
-          <Grid xs={12} sm={4}>
+        <Grid.Container gap={1} css={{ p: "32px" }}>
+          <Grid xs={12} sm={4} css={{ mb: "32px" }}>
             <Row
               css={{
                 display: "flex",
@@ -95,7 +95,7 @@ export const Layout: FC<PropsWithChildren<Props>> = ({
               <div>
                 <Image src={"/logo.svg"} alt="logo" />
               </div>
-              <Text>
+              <Text className="text-footer-description">
                 GMAC Investment is a gated community with a great location.
                 Located downtown, you’re within walking distance of Parks...{" "}
               </Text>
@@ -118,8 +118,10 @@ export const Layout: FC<PropsWithChildren<Props>> = ({
               >
                 Contact Us
               </Text>
-              <Text>GMAC Investment</Text>
-              <Text>Ciudad Jardín III, 278 Eucalipto PR, USA</Text>
+              <Text className="text-footer">GMAC Investment</Text>
+              <Text className="text-footer" css={{ mb: "12px" }}>
+                Ciudad Jardín III, 278 Eucalipto PR, USA
+              </Text>
               <Link
                 href="tel:7873626268"
                 css={{
@@ -129,6 +131,7 @@ export const Layout: FC<PropsWithChildren<Props>> = ({
                   mr: "auto",
                   width: "200px",
                   gap: "8px",
+                  mb: "12px",
                 }}
               >
                 <Image
@@ -136,9 +139,26 @@ export const Layout: FC<PropsWithChildren<Props>> = ({
                   alt="Call calling"
                   css={{ w: "20px" }}
                 />
-                <Text>+1 (787) 362-6268</Text>
+                <Text className="text-footer">+1 (787) 362-6268</Text>
               </Link>
-              <Text>info@gmacinvestment.com</Text>
+              <Link
+                href="mailto:info@gmacinvestment.com"
+                css={{
+                  display: "flex",
+                  justifyContent: "flex-start",
+                  p: "0px",
+                  mr: "auto",
+                  width: "350px",
+                  gap: "8px",
+                }}
+              >
+                <Image
+                  src={"/assets/icons/sms.svg"}
+                  alt="instagram"
+                  css={{ mr: "auto" }}
+                />
+                <Text className="text-footer">info@gmacinvestment.com</Text>
+              </Link>
             </Row>
           </Grid>
           <Grid xs={12} sm={4}>
@@ -197,7 +217,7 @@ export const Layout: FC<PropsWithChildren<Props>> = ({
               d: "flex",
               justifyContent: "center",
               borderTop: "1px solid #fff",
-              p: "12px",
+              p: "24px 12px",
             }}
           >
             <NextLink href="https://bladelink.company" passHref legacyBehavior>
