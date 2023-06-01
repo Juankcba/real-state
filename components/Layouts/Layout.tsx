@@ -118,10 +118,26 @@ export const Layout: FC<PropsWithChildren<Props>> = ({
               >
                 Contact Us
               </Text>
-              <Text>
-                GMAC Investment Ciudad Jardín III, 278 Eucalipto PR, USA
-              </Text>
-              <Text>+1 (787) 362-6268</Text>
+              <Text>GMAC Investment</Text>
+              <Text>Ciudad Jardín III, 278 Eucalipto PR, USA</Text>
+              <Link
+                href="tel:7873626268"
+                css={{
+                  display: "flex",
+                  justifyContent: "flex-start",
+                  p: "0px",
+                  mr: "auto",
+                  width: "200px",
+                  gap: "8px",
+                }}
+              >
+                <Image
+                  src="/assets/icons/call-calling.svg"
+                  alt="Call calling"
+                  css={{ w: "20px" }}
+                />
+                <Text>+1 (787) 362-6268</Text>
+              </Link>
               <Text>info@gmacinvestment.com</Text>
             </Row>
           </Grid>
@@ -155,6 +171,7 @@ export const Layout: FC<PropsWithChildren<Props>> = ({
                   display: "flex",
                   justifyContent: "flex-start",
                   alignItems: "flex-start",
+                  gap: "18px",
                   p: 0,
                 }}
               >
