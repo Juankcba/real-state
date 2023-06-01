@@ -81,7 +81,7 @@ export const Layout: FC<PropsWithChildren<Props>> = ({
           backgroundColor: theme?.colors.gray200.value,
         }}
       >
-        <Grid.Container gap={1} css={{ p: "32px" }}>
+        <Grid.Container gap={1} css={{ p: "32px 32px 0" }}>
           <Grid xs={12} sm={4} css={{ mb: "32px" }}>
             <Row
               css={{
@@ -93,7 +93,7 @@ export const Layout: FC<PropsWithChildren<Props>> = ({
               }}
             >
               <div>
-                <Image src={"/logo.svg"} alt="logo" />
+                <Image src={"/logo-gmac.svg"} alt="logo" />
               </div>
               <Text className="text-footer-description">
                 GMAC Investment is a gated community with a great location.
