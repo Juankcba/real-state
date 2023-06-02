@@ -2,9 +2,9 @@ import AboutUs from "@/components/home/AboutUs";
 import BannerHome from "@/components/home/BannerHome";
 import ListHouse from "@/components/home/ListHouse";
 import NeighborhoodPage from "@/components/home/Neighborhood";
-import { Button, Container, Grid, Row, Text } from "@nextui-org/react";
+import { Button, Container, Grid, Row, Text, Image } from "@nextui-org/react";
 import Head from "next/head";
-import Image from "next/image";
+
 import { Layout } from "../components/Layouts/Layout";
 import { FilterIcons } from "../components/ui/icons/FilterIcons";
 import OtherProyect from "../components/home/OtherProyect";
@@ -21,12 +21,20 @@ export default function Home() {
           m: "0 auto",
         }}
       >
+        <Image
+          src={"/assets/img/under-construction.png"}
+          alt="under-constructon"
+          width={"auto"}
+          height={450}
+        />
+
+        {/*  
         <BannerHome />
         <ListHouse />
         <NeighborhoodPage />
         <AboutUs />
         <OtherProyect />
-        <ContactUs />
+        <ContactUs /> */}
       </Container>
     </Layout>
   );

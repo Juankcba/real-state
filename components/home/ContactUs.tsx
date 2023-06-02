@@ -23,7 +23,13 @@ const ContactUs = () => {
   };
   return (
     <Grid.Container
-      css={{ minHeight: "726px", m: "32px 0", bg: "red", p: "0 135px" }}
+      css={{
+        minHeight: "726px",
+        m: "32px 0",
+        backgroundRepeat: "no-repeat",
+        p: "0 135px",
+        backgroundImage: "url('/assets/icons/bg-contactus.png')",
+      }}
     >
       <Grid xs={12} sm={6}>
         <Row
@@ -34,8 +40,12 @@ const ContactUs = () => {
             h: "100%",
           }}
         >
-          <Text h2>Did You Find Your</Text>
-          <Text h2>Dream Home ?</Text>
+          <Text h2 className="text-contact-title white">
+            Did You Find Your
+          </Text>
+          <Text h2 className="text-contact-title gold">
+            Dream Home ?
+          </Text>
           <Text>
             Thank you for getting in touch! if you find your dream home connect
             with us

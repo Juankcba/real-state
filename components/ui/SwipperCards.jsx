@@ -10,7 +10,7 @@ import { Image } from '@nextui-org/react';
 export const SwipperCards = () => {
 
     return (
-        <div class="swiper-container">
+        <div className="swiper-container">
             <Swiper
 
                 speed={500}
@@ -30,15 +30,15 @@ export const SwipperCards = () => {
                 navigation={true}
                 modules={[Autoplay, Pagination, Navigation]}
 
-                class="swiper-wrapper"
+                className="swiper-wrapper"
             >
-                <SwiperSlide class="swiper-slide">
+                <SwiperSlide className="swiper-slide">
                     <Image src={"/assets/img/img-large-1.png"} alt="img-1" />
                 </SwiperSlide>
-                <SwiperSlide class="swiper-slide">
+                <SwiperSlide className="swiper-slide">
                     <Image src={"/assets/img/img-large-1.png"} alt="img-2" />
                 </SwiperSlide>
-                <SwiperSlide class="swiper-slide">
+                <SwiperSlide className="swiper-slide">
                     <Image src={"/assets/img/img-large-1.png"} alt="img-3" />
                 </SwiperSlide>
             </Swiper>

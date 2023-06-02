@@ -195,7 +195,12 @@ export const Layout: FC<PropsWithChildren<Props>> = ({
                   p: 0,
                 }}
               >
-                <Button flat auto as={Link} href="">
+                <Button
+                  flat
+                  auto
+                  as={Link}
+                  href="https://www.instagram.com/gmacinvestment/"
+                >
                   <Image
                     src={"/assets/icons/instagram.svg"}
                     alt="instagram"
