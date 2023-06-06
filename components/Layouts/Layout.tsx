@@ -70,7 +70,7 @@ export const Layout: FC<PropsWithChildren<Props>> = ({
       </Navbar>
 
       <main>{children}</main>
-      <Link href={"https://wa.me/17873879213"}>
+      <Link target={"_blank"} href={"https://wa.me/17873879213"}>
         <Image
           src={"/assets/icons/whatsapp.svg"}
           alt="whatsapp"
