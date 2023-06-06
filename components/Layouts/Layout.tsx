@@ -131,7 +131,7 @@ export const Layout: FC<PropsWithChildren<Props>> = ({
                   p: "0px ",
                 }}
               >
-                Contact Us
+                Contáctanos
               </Text>
               <Text className="text-footer">GMAC Investment</Text>
               <Text className="text-footer" css={{ mb: "12px" }}>
@@ -199,7 +199,7 @@ export const Layout: FC<PropsWithChildren<Props>> = ({
                   p: "0px 20px",
                 }}
               >
-                Follow Us
+                Nuestras Redes Sociales
               </Text>
               <Container
                 css={{
@@ -222,12 +222,12 @@ export const Layout: FC<PropsWithChildren<Props>> = ({
                     css={{ mr: "auto" }}
                   />
                 </Button>
-                <Button flat auto as={Link} href="">
+                {/* <Button flat auto as={Link} href="">
                   <Image src={"/assets/icons/youtube.svg"} alt="youtube" />
                 </Button>
                 <Button flat auto as={Link} href="">
                   <Image src={"/assets/icons/twitter.svg"} alt="facebook" />
-                </Button>
+                </Button> */}
               </Container>
             </Row>
           </Grid>
