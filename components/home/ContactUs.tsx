@@ -72,6 +72,9 @@ const ContactUs = () => {
         p: "0 135px",
         backgroundImage: "url('/assets/icons/bg-contactus.png')",
         backgroundSize: "cover",
+        "@mdMax": {
+          p: "0 10px",
+        },
       }}
     >
       <Grid xs={12} sm={7}>
@@ -83,10 +86,10 @@ const ContactUs = () => {
             h: "100%",
           }}
         >
-          <Text h2 className="text-contact-title white">
+          <Text h2 size={"$2xl"} className="text-contact-title white">
             Queremos saber de tí
           </Text>
-          <Text h2 className="text-contact-title gold">
+          <Text h2 size={"$2xl"} className="text-contact-title gold">
             Contactanos
           </Text>
           <Text>

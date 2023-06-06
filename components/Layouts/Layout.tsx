@@ -86,12 +86,8 @@ export const Layout: FC<PropsWithChildren<Props>> = ({
       </Link>
 
       <footer
+        className="custom-footer"
         style={{
-          margin: "0px",
-          height: "311px",
-          display: "flex",
-          flexDirection: "column",
-          width: "100%",
           backgroundColor: theme?.colors.gray200.value,
         }}
       >

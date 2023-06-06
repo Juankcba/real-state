@@ -18,6 +18,9 @@ const AboutUs = () => {
         bg: "red",
         p: "100px ",
         backgroundImage: 'url("/assets/img/banner-about-us.png")',
+        "@mdMax": {
+          p: "24px",
+        },
       }}
       id="about-us"
     >
@@ -42,9 +45,9 @@ const AboutUs = () => {
             compromiso, compra y remodela propiedades para que el valor de las
             residencias y, por ende, las comunidades incremente.
           </Text>
-          <Button as={Link} color="warning" auto href="/about-us">
+          {/* <Button as={Link} color="warning" auto href="/about-us">
             Read More
-          </Button>
+          </Button> */}
         </Row>
       </Grid>
       <Grid xs={12} sm={5}>
@@ -64,41 +67,89 @@ const AboutUs = () => {
               src="/assets/img/melvinyjaneska.png"
               alt="Melvin y Janeska"
               width={450}
-              css={{ borderRadius: "24px" }}
+              css={{
+                borderRadius: "24px",
+                "@mdMax": {
+                  width: "auto",
+                  height: "150px",
+                  margin: "0 auto",
+                },
+              }}
             />
           </Col>
 
-          <Col css={{ display: "flex", justifyContent: "center", w: "72%" }}>
+          <Col
+            css={{
+              display: "flex",
+              justifyContent: "center",
+              w: "72%",
+              "@mdMax": { w: "100%" },
+            }}
+          >
             <Row css={{ display: "flex", flexDirection: "column", ml: "8px" }}>
-              <Text h3 css={{ textAlign: "center", mb: "0px" }}>
+              <Text
+                h3
+                css={{
+                  textAlign: "center",
+                  mb: "0px",
+                  "@mdMax": { fontSize: "$md" },
+                }}
+              >
                 Melvin, Barrientos
               </Text>
               <Text
                 h4
-                css={{ textAlign: "center", mb: "0px", color: "#ff9505" }}
+                css={{
+                  textAlign: "center",
+                  mb: "0px",
+                  color: "#ff9505",
+                  "@mdMax": { fontSize: "$md" },
+                }}
               >
                 Property Manager
               </Text>
               <Link
                 href="+1 787 387 9213"
-                css={{ textAlign: "center", mb: "0px", color: "#fff" }}
+                css={{
+                  textAlign: "center",
+                  mb: "0px",
+                  color: "#fff",
+                  "@mdMax": { fontSize: "$md" },
+                }}
               >
                 +1 787 387 9213
               </Link>
             </Row>
             <Row css={{ display: "flex", flexDirection: "column", ml: "24px" }}>
-              <Text h3 css={{ textAlign: "center", mb: "0px" }}>
+              <Text
+                h3
+                css={{
+                  textAlign: "center",
+                  mb: "0px",
+                  "@mdMax": { fontSize: "$md" },
+                }}
+              >
                 Janeska, Maldonado
               </Text>
               <Text
                 h4
-                css={{ textAlign: "center", mb: "0px", color: "#ff9505" }}
+                css={{
+                  textAlign: "center",
+                  mb: "0px",
+                  color: "#ff9505",
+                  "@mdMax": { fontSize: "$md" },
+                }}
               >
                 Property Manager
               </Text>
               <Link
                 href="tel:+1 787 362 6268"
-                css={{ textAlign: "center", mb: "0px", color: "#fff" }}
+                css={{
+                  textAlign: "center",
+                  mb: "0px",
+                  color: "#fff",
+                  "@mdMax": { fontSize: "$md" },
+                }}
               >
                 +1 787 362 6268
               </Link>
