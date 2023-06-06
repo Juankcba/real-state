@@ -1,8 +1,9 @@
-import React from "react";
+import React, { useState } from "react";
 import {
   Button,
   Container,
   Input,
+  Loading,
   Row,
   Text,
   Textarea,
@@ -12,15 +13,56 @@ import Box from "@mui/material/Box";
 import InputLabel from "@mui/material/InputLabel";
 import MenuItem from "@mui/material/MenuItem";
 import FormControl from "@mui/material/FormControl";
-
+import { toast } from "react-toastify";
 import Select, { SelectChangeEvent } from "@mui/material/Select";
-
+import { appApi } from "@/apis";
+import { useFormik } from "formik";
+import * as Yup from "yup";
 const ContactUs = () => {
-  const [age, setAge] = React.useState("");
+  const [loading, setLoading] = useState(false);
+  const formik = useFormik({
+    initialValues: {
+      name: "",
+      email: "",
+      phone: "",
+      menssage: "",
+    },
+    validationSchema: Yup.object().shape({
+      email: Yup.string()
+        .email("Ingrese un email válido")
+        .required("Ingrese un email")
+        .max(255),
+      name: Yup.string()
+        .matches(/^[A-Za-z ]*$/, "Ingrese un nombre válido")
+        .max(40)
+        .required("Ingrese su nombre y apellido"),
+      phone: Yup.string(),
+      menssage: Yup.string(),
+    }),
 
-  const handleChange = (event: SelectChangeEvent) => {
-    setAge(event.target.value as string);
-  };
+    onSubmit: async (values) => {
+      setLoading(true);
+      const initValues = {
+        name: "Melvin",
+        email: ["info@gmacinvestment.com", "gmacpuertorico@gmail.com"],
+        subject: "Nueva consulta",
+        message: `Has recibido una nueva consulta de ${values.name}, te puedes comunicar al email: ${values.email} o al teléfono:${values.phone}. La consulta es: ${values.menssage}`,
+      };
+      try {
+        await appApi.post("/email/contact", initValues).then((res: any) => {
+          console.log("responder email", res);
+          formik.resetForm();
+          toast("Email enviado");
+          setLoading(false);
+        });
+      } catch (error) {
+        console.log(error);
+        toast("No se pudo enviar el email");
+        setLoading(false);
+      }
+    },
+  });
+
   return (
     <Grid.Container
       css={{
@@ -61,22 +103,52 @@ const ContactUs = () => {
           alignItems: "center",
         }}
       >
-        <form>
+        <form onSubmit={formik.handleSubmit} onReset={formik.handleReset}>
           <Grid.Container gap={1} css={{ maxW: "470px" }}>
             <Grid xs={12} sm={6}>
-              <Input fullWidth placeholder="Your Name" />
+              <Input
+                fullWidth
+                placeholder="Nombre"
+                name="name"
+                value={formik.values.name}
+                onChange={formik.handleChange}
+                onBlur={formik.handleBlur}
+              />
             </Grid>
             <Grid xs={12} sm={6}>
-              <Input fullWidth placeholder="Your Email" />
+              <Input
+                fullWidth
+                placeholder="Correo electrónico"
+                name="email"
+                value={formik.values.email}
+                onChange={formik.handleChange}
+                onBlur={formik.handleBlur}
+              />
             </Grid>
             <Grid xs={12}>
-              <Input fullWidth placeholder="Phone Number" />
+              <Input
+                fullWidth
+                placeholder="Teléfono"
+                name="phone"
+                value={formik.values.phone}
+                onChange={formik.handleChange}
+                onBlur={formik.handleBlur}
+              />
             </Grid>
 
             <Grid xs={12}>
-              <Textarea fullWidth placeholder="Menssage" />
+              <Textarea
+                fullWidth
+                placeholder="Mensaje"
+                name="menssage"
+                value={formik.values.menssage}
+                onChange={formik.handleChange}
+                onBlur={formik.handleBlur}
+              />
             </Grid>
-            <Button css={{ mt: "12px" }}>Submit</Button>
+            <Button type="submit" css={{ mt: "12px" }} disabled={loading}>
+              Enviar {loading && <Loading size={"sm"} />}
+            </Button>
           </Grid.Container>
         </form>
       </Grid>
