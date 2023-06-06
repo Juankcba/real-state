@@ -18,10 +18,10 @@ const NeighborhoodPage = () => {
       >
         <Row css={{ flexDirection: "column" }}>
           <Text h2 css={{ color: "#FF9505", mb: "0" }}>
-            Neighborhood
+            Vecindario
           </Text>
           <Text css={{ color: "rgba(255, 255, 255, 0.5)" }}>
-            Deam home in Puerto Rico, USA
+            Propiedad de ensueño en Puerto Rico, USA
           </Text>
         </Row>
       </Grid>
