@@ -149,7 +149,11 @@ const ContactUs = () => {
                 onBlur={formik.handleBlur}
               />
             </Grid>
-            <Button type="submit" css={{ mt: "12px" }} disabled={loading}>
+            <Button
+              type="submit"
+              css={{ mt: "12px", "@mdMax": { w: "100%" } }}
+              disabled={loading}
+            >
               Enviar {loading && <Loading size={"sm"} />}
             </Button>
           </Grid.Container>

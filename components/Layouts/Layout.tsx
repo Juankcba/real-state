@@ -180,6 +180,10 @@ export const Layout: FC<PropsWithChildren<Props>> = ({
                 maxW: "205px",
                 justifyContent: "flex-start",
                 alignItems: "flex-start",
+                p: 0,
+                "@mdMax": {
+                  maxW: "100%",
+                },
               }}
             >
               <Text
@@ -193,6 +197,9 @@ export const Layout: FC<PropsWithChildren<Props>> = ({
                   letterSpacing: "0.02em",
                   color: "#FFFFFF",
                   p: "0px 20px",
+                  "@mdMax": {
+                    p: "0px",
+                  },
                 }}
               >
                 Nuestras Redes Sociales
@@ -204,6 +211,9 @@ export const Layout: FC<PropsWithChildren<Props>> = ({
                   alignItems: "flex-start",
                   gap: "18px",
                   p: 0,
+                  "@mdMax": {
+                    pb: "20px",
+                  },
                 }}
               >
                 <Button
