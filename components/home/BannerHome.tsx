@@ -6,47 +6,28 @@ const BannerHome = () => {
     <Container
       css={{
         maxWidth: "100%",
-        m: 0,
-        p: 0,
-        position: "relative",
-        top: 0,
-        left: 0,
+        backgroundImage: "url(/assets/img/banner.png)",
+        backgroundSize: "cover",
+        h: "775px",
+        width: "100%",
       }}
     >
-      <Image
-        src="/assets/img/banner.png"
-        alt="Banner-Home"
-        width={"100vw"}
-        height={776}
-        css={{
-          position: "absolute",
-          top: 0,
-          width: "100%",
-          left: 0,
-          zIndex: 1,
-          objectFit: "cover",
-          objectPosition: "center",
-        }}
-      />
       <Row
         css={{
-          position: "absolute",
-          top: "50%",
-          left: "50px",
-          "@mdMin": {
-            top: "299px",
-            left: "135px",
-          },
-          zIndex: 2,
           display: "flex",
           flexDirection: "column",
+          justifyContent: "center",
+          alignItems: "center",
+          h: "100%",
+          w: "100%",
         }}
       >
-        <Text h1 size={"$5xl"}>
-          Find Your <span className="banner-home-span">Dream Home</span>
+        <Text h1 size={"$5xl"} className="banner-home-title">
+          Encuentra tu {""}
+          <span className="banner-home-span">Propiedad de ensueño</span>
         </Text>
-        <Text h1 size={"$5xl"}>
-          in Puerto Rico
+        <Text h1 size={"$5xl"} className="banner-home-title">
+          en Puerto Rico
         </Text>
       </Row>
     </Container>

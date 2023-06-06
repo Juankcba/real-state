@@ -107,9 +107,17 @@ a {
     color-scheme: dark;
   }
 }
-
-.banner-home-span {
-  color: #ff9505;
+.banner-home-title {
+  font-family: "Montserrat";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 64px;
+  letter-spacing: 0.03em;
+  color: #fffbfb;
+  text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  .banner-home-span {
+    color: #ff9505;
+  }
 }
 
 .custom-map-container {
@@ -196,5 +204,25 @@ a {
   font-weight: 700;
   font-size: 64px;
   line-height: 78px;
+
+  &.white {
+    color: #fffbfb;
+  }
+  &.gold {
+  }
+}
+.title-about-us {
+  font-family: "Montserrat";
+  font-style: normal;
+  font-weight: 600;
+  font-size: 32px;
+
+  color: #ff9505;
+}
+.subtitle-about-us {
+  font-family: "Montserrat";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
   color: #fffbfb;
 }

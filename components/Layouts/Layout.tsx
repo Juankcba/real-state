@@ -50,7 +50,7 @@ export const Layout: FC<PropsWithChildren<Props>> = ({
         />
         <meta property="og:image" content={`${origin}/logo.svg`} />
       </Head>
-      <Navbar variant="sticky">
+      <Navbar variant="static">
         <Navbar.Brand>
           <Image
             src="/logo-horizontal.svg"
@@ -73,7 +73,7 @@ export const Layout: FC<PropsWithChildren<Props>> = ({
 
       <footer
         style={{
-          margin: "32px 0px",
+          margin: "0px",
           height: "311px",
           display: "flex",
           flexDirection: "column",
@@ -81,27 +81,28 @@ export const Layout: FC<PropsWithChildren<Props>> = ({
           backgroundColor: theme?.colors.gray200.value,
         }}
       >
-        <Grid.Container gap={1} css={{ p: "32px 32px 0" }}>
-          <Grid xs={12} sm={4} css={{ mb: "32px" }}>
+        <Grid.Container gap={1} css={{ p: "32px" }}>
+          <Grid xs={12} sm={4}>
             <Row
               css={{
                 display: "flex",
                 justifyContent: "flex-start",
                 alignItems: "flex-start",
                 flexDirection: "column",
-                width: "313px",
+                height: "160px",
+                width: "100%",
               }}
             >
-              <div>
-                <Image src={"/logo-gmac.svg"} alt="logo" />
-              </div>
-              <Text className="text-footer-description">
-                GMAC Investment is a gated community with a great location.
-                Located downtown, you’re within walking distance of Parks...{" "}
-              </Text>
+              <Image
+                src={"/logo-gmac.svg"}
+                alt="logo"
+                width="100%"
+                height="125px"
+                css={{ objectFit: "scale-up" }}
+              />
             </Row>
           </Grid>
-          <Grid xs={12} sm={4}>
+          <Grid xs={12} sm={4} css={{ mb: "32px" }}>
             <Row css={{ d: "flex", flexDirection: "column" }}>
               <Text
                 css={{
@@ -113,7 +114,7 @@ export const Layout: FC<PropsWithChildren<Props>> = ({
                   lineHeight: "29px",
                   letterSpacing: "0.02em",
                   color: "#FFFFFF",
-                  p: "0px 20px",
+                  p: "0px ",
                 }}
               >
                 Contact Us

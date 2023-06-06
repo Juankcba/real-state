@@ -25,13 +25,14 @@ const ContactUs = () => {
     <Grid.Container
       css={{
         minHeight: "726px",
-        m: "32px 0",
+        m: "32px 0px 0px 0px",
         backgroundRepeat: "no-repeat",
         p: "0 135px",
         backgroundImage: "url('/assets/icons/bg-contactus.png')",
+        backgroundSize: "cover",
       }}
     >
-      <Grid xs={12} sm={6}>
+      <Grid xs={12} sm={7}>
         <Row
           css={{
             display: "flex",
@@ -41,20 +42,19 @@ const ContactUs = () => {
           }}
         >
           <Text h2 className="text-contact-title white">
-            Did You Find Your
+            Queremos saber de tí
           </Text>
           <Text h2 className="text-contact-title gold">
-            Dream Home ?
+            Contactanos
           </Text>
           <Text>
-            Thank you for getting in touch! if you find your dream home connect
-            with us
+            Gracias por confiar en nosotros, puedes contactarnos via email
           </Text>
         </Row>
       </Grid>
       <Grid
         xs={12}
-        sm={6}
+        sm={5}
         css={{
           display: "flex",
           justifyContent: "center",
@@ -62,38 +62,21 @@ const ContactUs = () => {
         }}
       >
         <form>
-          <Grid.Container css={{ maxW: "470px", gap: "8px" }}>
-            <Grid xs={12} sm={5}>
+          <Grid.Container gap={1} css={{ maxW: "470px" }}>
+            <Grid xs={12} sm={6}>
               <Input fullWidth placeholder="Your Name" />
             </Grid>
-            <Grid xs={12} sm={5}>
+            <Grid xs={12} sm={6}>
               <Input fullWidth placeholder="Your Email" />
             </Grid>
-            <Grid xs={12} sm={5}>
+            <Grid xs={12}>
               <Input fullWidth placeholder="Phone Number" />
             </Grid>
-            <Grid xs={12} sm={5}>
-              <Box sx={{ minWidth: "100%" }}>
-                <FormControl fullWidth>
-                  <InputLabel id="demo-simple-select-label">Age</InputLabel>
-                  <Select
-                    labelId="demo-simple-select-label"
-                    id="demo-simple-select"
-                    value={age}
-                    label="Age"
-                    onChange={handleChange}
-                  >
-                    <MenuItem value={10}>Ten</MenuItem>
-                    <MenuItem value={20}>Twenty</MenuItem>
-                    <MenuItem value={30}>Thirty</MenuItem>
-                  </Select>
-                </FormControl>
-              </Box>
-            </Grid>
+
             <Grid xs={12}>
               <Textarea fullWidth placeholder="Menssage" />
             </Grid>
-            <Button>Submit</Button>
+            <Button css={{ mt: "12px" }}>Submit</Button>
           </Grid.Container>
         </form>
       </Grid>

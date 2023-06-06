@@ -1,10 +1,27 @@
 import React from "react";
-import { Col, Grid, Row, Text, Button, Link } from "@nextui-org/react";
+import {
+  Col,
+  Grid,
+  Row,
+  Text,
+  Button,
+  Link,
+  Avatar,
+  Image,
+} from "@nextui-org/react";
 
 const AboutUs = () => {
   return (
-    <Grid.Container css={{ h: "726px", bg: "red", p: "10%" }}>
-      <Grid xs={12} sm={9}>
+    <Grid.Container
+      css={{
+        h: "726px",
+        bg: "red",
+        p: "100px ",
+        backgroundImage: 'url("/assets/img/banner-about-us.png")',
+      }}
+      id="about-us"
+    >
+      <Grid xs={12} sm={7}>
         <Row
           css={{
             display: "flex",
@@ -14,64 +31,78 @@ const AboutUs = () => {
             w: "654px",
           }}
         >
-          <Text h2 css={{ mb: "16px" }}>
-            About Us
+          <Text h2 className="title-about-us" css={{ mb: "16px" }}>
+            Sobre Nosotros
           </Text>
-          <Text h3 css={{ mb: "16px" }}>
-            Dream Home is a gated community with a great location. Located
-            downtown, you’re within walking distance of Parks, and the best
-            shopping, dining and entertainment Getting around is a breeze, with
-            easy access to freeways, buses and trolleys. . Laundry is available
-            on premises.
+          <Text h3 className="subtitle-about-us" css={{ mb: "16px" }}>
+            GMAC INVESTMENT, comprometidos con la prosperidad en las comunidades
+            puertorriqueñas, apoya a los dueño con propiedades de alquiler, a
+            corto y largo plazo, que desean delegar la selección de inquilinos,
+            el mantenimiento y la administración de la propiedad. En el mismo
+            compromiso, compra y remodela propiedades para que el valor de las
+            residencias y, por ende, las comunidades incremente.
           </Text>
           <Button as={Link} color="warning" auto href="/about-us">
             Read More
           </Button>
         </Row>
       </Grid>
-      <Grid xs={12} sm={3}>
+      <Grid xs={12} sm={5}>
         <Row
           css={{
             display: "flex",
             flexDirection: "column",
             justifyContent: "center",
             alignItems: "center",
+            gap: "12px",
           }}
         >
-          <Col>
-            <Text h2 css={{ textAlign: "center" }}>
-              500+
-            </Text>
-            <Text h3 css={{ textAlign: "center" }}>
-              Projects
-            </Text>
-            <Text h4 css={{ textAlign: "center" }}>
-              Over 500 lexury villas for“Home Away From Home” experience
-            </Text>
+          <Col
+            css={{ display: "flex", justifyContent: "flex-start", mb: "24px" }}
+          >
+            <Image
+              src="/assets/img/melvinyjaneska.png"
+              alt="Melvin y Janeska"
+              width={450}
+              css={{ borderRadius: "24px" }}
+            />
           </Col>
 
-          <Col>
-            <Text h2 css={{ textAlign: "center" }}>
-              40+
-            </Text>
-            <Text h3 css={{ textAlign: "center" }}>
-              Locations
-            </Text>
-            <Text h4 css={{ textAlign: "center" }}>
-              luxury villas and private holiday homes, from all across
-            </Text>
-          </Col>
-
-          <Col>
-            <Text h2 css={{ textAlign: "center" }}>
-              24/7
-            </Text>
-            <Text h3 css={{ textAlign: "center" }}>
-              Help
-            </Text>
-            <Text h4 css={{ textAlign: "center" }}>
-              24/7 Help service for all customers to guide and support
-            </Text>
+          <Col css={{ display: "flex", justifyContent: "center", w: "72%" }}>
+            <Row css={{ display: "flex", flexDirection: "column", ml: "8px" }}>
+              <Text h3 css={{ textAlign: "center", mb: "0px" }}>
+                Melvin, Barrientos
+              </Text>
+              <Text
+                h4
+                css={{ textAlign: "center", mb: "0px", color: "#ff9505" }}
+              >
+                Property Manager
+              </Text>
+              <Link
+                href="+1 787 387 9213"
+                css={{ textAlign: "center", mb: "0px", color: "#fff" }}
+              >
+                +1 787 387 9213
+              </Link>
+            </Row>
+            <Row css={{ display: "flex", flexDirection: "column", ml: "24px" }}>
+              <Text h3 css={{ textAlign: "center", mb: "0px" }}>
+                Janeska, Maldonado
+              </Text>
+              <Text
+                h4
+                css={{ textAlign: "center", mb: "0px", color: "#ff9505" }}
+              >
+                Property Manager
+              </Text>
+              <Link
+                href="tel:+1 787 362 6268"
+                css={{ textAlign: "center", mb: "0px", color: "#fff" }}
+              >
+                +1 787 362 6268
+              </Link>
+            </Row>
           </Col>
         </Row>
       </Grid>

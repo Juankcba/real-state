@@ -6,11 +6,9 @@ const OtherProyect = () => {
   return (
     <Container css={{ m: "32px auto" }}>
       <Text h2 css={{ textAlign: "center" }}>
-        Other Projects
+        Proyectos
       </Text>
-      <Text css={{ textAlign: "center" }}>
-        Other projects by us in different locations
-      </Text>
+
       <SwipperCards />
     </Container>
   );

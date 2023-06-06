@@ -21,20 +21,12 @@ export default function Home() {
           m: "0 auto",
         }}
       >
-        <Image
-          src={"/assets/img/under-construction.png"}
-          alt="under-constructon"
-          width={"auto"}
-          height={450}
-        />
-
-        {/*  
         <BannerHome />
-        <ListHouse />
+        {/* <ListHouse /> */}
         <NeighborhoodPage />
         <AboutUs />
         <OtherProyect />
-        <ContactUs /> */}
+        <ContactUs />
       </Container>
     </Layout>
   );
