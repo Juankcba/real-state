@@ -61,15 +61,29 @@ export const Layout: FC<PropsWithChildren<Props>> = ({
         </Navbar.Brand>
         <Navbar.Content hideIn="xs">
           <Navbar.Link href="#home">Home</Navbar.Link>
-          <Navbar.Link href="#about-us">About Us</Navbar.Link>
-          <Navbar.Link href="#other-proyects">Other Proyects</Navbar.Link>
-          <Button as={Link} href="#enquire-now" auto color="warning">
+          <Navbar.Link href="#about-us">Sobre Nosotros</Navbar.Link>
+          <Navbar.Link href="#proyects">Proyectos</Navbar.Link>
+          {/* <Button as={Link} href="#enquire-now" auto color="warning">
             Enquire Now
-          </Button>
+          </Button> */}
         </Navbar.Content>
       </Navbar>
 
       <main>{children}</main>
+      <Link href={"https://wa.me/17873879213"}>
+        <Image
+          src={"/assets/icons/whatsapp.svg"}
+          alt="whatsapp"
+          css={{
+            position: "fixed",
+            zIndex: 100,
+            bottom: "20px",
+            right: "20px",
+            width: "75px",
+            height: "75px",
+          }}
+        />
+      </Link>
 
       <footer
         style={{
