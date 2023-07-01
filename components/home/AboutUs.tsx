@@ -14,6 +14,7 @@ const AboutUs = () => {
   return (
     <Grid.Container
       css={{
+        mt: "24px",
         h: "726px",
         bg: "red",
         p: "100px ",
@@ -64,7 +65,7 @@ const AboutUs = () => {
             css={{ display: "flex", justifyContent: "flex-start", mb: "24px" }}
           >
             <Image
-              src="/assets/img/melvinyjaneska.png"
+              src="/assets/img/melvinyjaneska.webp"
               alt="Melvin y Janeska"
               width={450}
               css={{

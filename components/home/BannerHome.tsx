@@ -6,7 +6,7 @@ const BannerHome = () => {
     <Container
       css={{
         maxWidth: "100%",
-        backgroundImage: "url(/assets/img/banner.png)",
+        backgroundImage: "url(/assets/img/banner.webp)",
         backgroundSize: "cover",
         h: "775px",
         width: "100%",
