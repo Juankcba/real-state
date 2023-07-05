@@ -22,6 +22,9 @@ export default function Home() {
         }}
       >
         <BannerHome />
+        <Text h1 css={{ w: "100%", textAlign: "center" , m:'48px auto'}}>
+          Hogares que edifican, comunidades que prosperan
+        </Text>
         {/* <ListHouse /> */}
         {/* <NeighborhoodPage /> */}
         <AboutUs />

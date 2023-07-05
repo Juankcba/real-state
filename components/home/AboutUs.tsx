@@ -96,7 +96,7 @@ const AboutUs = () => {
                   "@mdMax": { fontSize: "$md" },
                 }}
               >
-                Melvin, Barrientos
+                Melvin Barrientos
               </Text>
               <Text
                 h4
@@ -130,7 +130,7 @@ const AboutUs = () => {
                   "@mdMax": { fontSize: "$md" },
                 }}
               >
-                Janeska, Maldonado
+                Janeska Maldonado
               </Text>
               <Text
                 h4

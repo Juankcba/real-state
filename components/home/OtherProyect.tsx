@@ -4,7 +4,7 @@ import { SwipperCards } from "../ui/SwipperCards";
 
 const OtherProyect = () => {
   return (
-    <Container css={{ m: "32px auto" }}>
+    <Container css={{ m: "32px auto" }} id="proyects">
       <Text h2 css={{ textAlign: "center" }}>
         Proyectos
       </Text>

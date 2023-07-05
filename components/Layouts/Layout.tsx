@@ -92,7 +92,7 @@ export const Layout: FC<PropsWithChildren<Props>> = ({
         }}
       >
         <Grid.Container gap={1} css={{ p: "32px" }}>
-          <Grid xs={12} sm={4}>
+          <Grid xs={12} sm={8}>
             <Row
               css={{
                 display: "flex",
@@ -129,18 +129,18 @@ export const Layout: FC<PropsWithChildren<Props>> = ({
               >
                 Contáctanos
               </Text>
-              <Text className="text-footer">GMAC Investment</Text>
               <Text className="text-footer" css={{ mb: "12px" }}>
-                Ciudad Jardín III, 278 Eucalipto PR, USA
+                GMAC Investment
               </Text>
+
               <Link
-                href="tel:7873626268"
+                href="tel:9393564622"
                 css={{
                   display: "flex",
                   justifyContent: "flex-start",
                   p: "0px",
                   mr: "auto",
-                  width: "200px",
+                  width: "250px",
                   gap: "8px",
                   mb: "12px",
                 }}
@@ -150,7 +150,7 @@ export const Layout: FC<PropsWithChildren<Props>> = ({
                   alt="Call calling"
                   css={{ w: "20px" }}
                 />
-                <Text className="text-footer">+1 (787) 362-6268</Text>
+                <Text className="text-footer">+1 (939) 356-GMAC (4622) </Text>
               </Link>
               <Link
                 href="mailto:info@gmacinvestment.com"
@@ -172,7 +172,7 @@ export const Layout: FC<PropsWithChildren<Props>> = ({
               </Link>
             </Row>
           </Grid>
-          <Grid xs={12} sm={4}>
+          {/* <Grid xs={12} sm={4}>
             <Row
               css={{
                 d: "flex",
@@ -228,15 +228,15 @@ export const Layout: FC<PropsWithChildren<Props>> = ({
                     css={{ mr: "auto" }}
                   />
                 </Button>
-                {/* <Button flat auto as={Link} href="">
+                 <Button flat auto as={Link} href="">
                   <Image src={"/assets/icons/youtube.svg"} alt="youtube" />
                 </Button>
                 <Button flat auto as={Link} href="">
                   <Image src={"/assets/icons/twitter.svg"} alt="facebook" />
-                </Button> */}
+                </Button> 
               </Container>
             </Row>
-          </Grid>
+          </Grid> */}
           <Grid
             xs={12}
             css={{
