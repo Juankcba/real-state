@@ -39,12 +39,20 @@ const AboutUs = () => {
             Sobre Nosotros
           </Text>
           <Text h3 className="subtitle-about-us" css={{ mb: "16px" }}>
-            GMAC INVESTMENT, comprometidos con la prosperidad en las comunidades
-            puertorriqueñas, apoya a los dueño con propiedades de alquiler, a
-            corto y largo plazo, que desean delegar la selección de inquilinos,
-            el mantenimiento y la administración de la propiedad. En el mismo
-            compromiso, compra y remodela propiedades para que el valor de las
-            residencias y, por ende, las comunidades incremente.
+            En GMAC INVESTMENT, nuestro enfoque e interés siempre ha sido
+            proveer un espacio residencial o vacacional digno, seguro y
+            adecuado, donde permee el respeto y la consideración mutua entre
+            residentes y el entorno comunitario. Estamos comprometidos con la
+            responsabilidad y justicia social para la prosperidad de nuestras
+            comunidades, bajo la filosofía de Ganar-Ganar (win-win). Pareamos
+            arrendatarios pre-cualificados con arrendadores y asistimos a esos
+            dueños con sus alquileres de corto o largo plazo en la
+            administración, mantenimiento, reparaciones de la propiedad y la
+            selección de arrendatarios. Bajo ese mismo compromiso, promovemos
+            hogares que edifican y transforman comunidades. También compramos,
+            remodelamos, vendemos y/o alquilamos propiedades, para que el valor
+            de las residencias aumente y por ende, mejorar el entorno
+            comunitario.
           </Text>
           {/* <Button as={Link} color="warning" auto href="/about-us">
             Read More
